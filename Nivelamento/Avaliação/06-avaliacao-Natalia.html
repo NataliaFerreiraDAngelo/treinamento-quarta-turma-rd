@@ -1,0 +1,64 @@
+<!DOCTYPE html>
+<html lang="pt-br">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title></title>
+</head>
+<body>
+	<script>
+		/*
+		6)O número PI ou 3.14159... pode ser obtido através de várias fórmulas.
+		Uma forma simples de obtê-lo é pela fórmula de Leibniz, que diz que a convergência da seguinte série infinita é igual a PI:PI = 4/1 - 4/3 + 4/5 - 4/7 + 4/9 - 4/11 ...
+		Escreva uma função chamada "calculaPi" que recebe o número de termos a serem usados na fórmula de Leibniz para obter o valor de PI.
+		O resultado do cálculo deve ser retornado pela função.
+		Ex: ao chamar calculaPi(4), deve retornar o valor de (4/1 - 4/3 + 4/5 - 4/7), note que a expressão tem 4 termos, pois 4 foi o número de termos informado no parâmetro.
+		LEMBRANDO QUE O RETORNO É O RESULTADO DA EXPRESSÃO!!!
+		*/
+	
+		function pulaLinha(){
+			document.write("<br>");
+			document.write("<hr>");
+		}
+		function mostra(frase){
+			document.write(frase);
+			pulaLinha ();
+		}
+		function calculaPi (termos){
+			let resultado = 0;
+			let cont = 1;
+			let erro = "O parâmetro informado não é um número";
+			if(isNaN(termos)){
+				return erro;
+			}else{
+				for (let i = 1; i <= termos; i++){
+					if (i % 2 != 0){
+						if (cont % 2 != 0){
+							resultado =  parseFloat(resultado + 4/i).toFixed(7);
+							}else {
+							resultado =  parseFloat(resultado - 4/i).toFixed(7);			
+						}
+					}else {
+						if (cont % 2 != 0){
+							resultado =  parseFloat(resultado + 4/(i+1)).toFixed(7);
+						}else {
+							resultado =  parseFloat(resultado - 4/(i+1)).toFixed(7);							
+						}
+					}
+					cont ++;
+				}
+			}
+			return resultado;
+			
+		}
+		
+		//Testes Unitários
+		mostra("O resultado deverá ser o 2,8952380. O retorno da função é = " + calculaPi(4));
+		mostra("O resultado deverá ser o 3,0418396. O retorno da função é = " + calculaPi(10));
+		mostra("O resultado deverá ser o 3,2837384. O retorno da função é = " + calculaPi(7));
+		mostra("O resultado deverá ser o 4. O retorno da função é = " + calculaPi(1));
+		mostra(calculaPi("a"));
+				
+	</script>
+</body>
+</html>

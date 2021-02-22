@@ -1,0 +1,59 @@
+<!DOCTYPE html>
+<html lang="pt-br">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title></title>
+</head>
+<body>
+	<script>
+		/*
+		5)Defina uma função chamada “sequenciaNumeros”, que deve receber um número inteiro como parâmetro e que deve retornar um array com uma sequência de números que devem ser obtidos a partir do número informado no parâmetro.
+		A regra para definir a sequência de números informados é a seguinte:
+		Considerando como x o número informado no parâmetro:- se x é par: o número a ser incluído na sequência é x / 2- se x é ímpar: o número a ser incluído na sequência é 3*x+1O número recém-incluído passa a ser o novo x e a sequência deve serrealizada até que se chegue ao número 1.
+		Ex.: ao chamar sequenciaNumeros(10), deve ser retornado o array [5,16, 8, 4, 2, 1]
+		*/
+	
+		function pulaLinha(){
+			document.write("<br>");
+			document.write("<br>");
+		}
+		function mostra(frase){
+			document.write(frase);
+			pulaLinha ();
+		}
+		function sequenciaNumeros(numero){
+			let array = [];
+			let x = numero;
+			let erro = "O parâmetro informado não é um número";
+			if(isNaN(numero)){
+					return erro;
+			}else{
+				while (x != 1){
+					if (x % 2 == 0){
+						x = x / 2;
+					}else {
+						x = 3 * x + 1;
+					}
+					array.push(x);
+				}
+				return array;
+			}
+		}
+		
+		
+		
+		//Testes Unitários
+		mostra("O resultado deverá ser [5,16, 8, 4, 2, 1]. O retorno da função é = [" + sequenciaNumeros(10) + "]");
+		mostra("O resultado deverá ser [16, 8, 4, 2, 1]. O retorno da função é = [" + sequenciaNumeros(5) + "]");
+		mostra("O resultado deverá ser [1]. O retorno da função é = [" + sequenciaNumeros(2) + "]");
+		mostra("O resultado deverá ser []. O retorno da função é = [" + sequenciaNumeros(1) + "]");
+		mostra("O resultado deverá ser [52, 26, 1310, 5 ,16, 8, 4, 2, 1]. O retorno da função é = [" + sequenciaNumeros(17) + "]");
+		mostra("<hr>");
+		mostra("Teste unitário com strings no parâmetro:");
+		mostra(sequenciaNumeros("a"));
+		
+		
+	</script>
+</body>
+</html>

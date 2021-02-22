@@ -1,0 +1,55 @@
+<!DOCTYPE html>
+<html lang="pt-br">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title></title>
+</head>
+<body>
+	<script>
+		/*
+		1) Este é um exercício difícil! 
+		Você deve sortear 6 números de 1 a 60 e guardar em um array. 
+		Depois peça para o usuário dizer 6 números, um de cada vez (pode usar prompt) e guarde-os em outro array. 
+		Aí diga quantos números ele acertou. Sim, é a loteria certinha desta vez!
+		*/
+		
+		function sorteiaNumeros(numeros){
+			let numerosMegaSena = [];
+			let numerosSorteados; 
+			
+			while (numerosMegaSena.length < 6){
+				numerosSorteados = Math.ceil(Math.random() * 60);
+				
+				if (numerosMegaSena.indexOf(numerosSorteados) < 0) {
+					numerosMegaSena.push(numerosSorteados);
+				}
+			}
+			
+			return numerosMegaSena;
+		}
+		function chute(numeros){
+			let numerosChutados = [];
+			let chutes; 
+			
+			while (numerosChutados.length < 6){
+				chutes = Number(promtp("Chute os 06 números da Mega Sena:"));
+				numerosChutados.push(chutes);
+				
+			}
+			
+			return numerosChutados;
+		}
+					
+		
+		let numerosSorteados = sorteiaNumeros(60);
+		let numerosSugeridos = chute(6);
+		document.write ("Os números sorteados foram: " + numerosSorteados);
+		document.write ("Os números chutados foram: " + numerosSugeridos);
+		
+		
+	
+	
+	</script>
+</body>
+</html>

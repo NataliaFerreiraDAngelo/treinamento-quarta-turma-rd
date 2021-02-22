@@ -1,0 +1,26 @@
+<script>
+
+let numeros = [10, 20, 30, 40, 50, 60];
+document.write("numeros = "+numeros);
+document.write("<br>");
+document.write("numeros.length = "+numeros.length);
+document.write("<br>");
+
+// inserir um elemento no meio do array com splice()
+// 1o param = posicao onde o elemento será inserido
+// 2o param = quantos elementos serão removidos a partir da posicao indicada no parametro 1
+// 3o param = valor do elemento a ser inserido (se omitido, splice não insere nenhum elemento)
+//numeros.splice(1, 0, 1000); // inclui na posicao 1 e nao remove nenhum elemento
+//numeros.splice(1, 2, 1000); // inclui na posicao 1 e remove os 2 proximos elementos a partir da posicao 1
+//numeros.splice(1, 2); // remove os 2 proxímos elementos a partir da posicao indicada no parametro 1
+//numeros.splice(1, numeros.length); // remove todos os elementos a partir da posicao indicada no parametro 1
+//numeros.splice(1, numeros.length, 1000); // remove todos os elementos a partir da posicao indicada no parametro 1 e incluir o valor indicado no parametro 3
+//numeros.splice(1, 0, 1000, 2000, 3000);
+//numeros.splice(-2, 0, 1000, 2000, 3000);
+numeros.splice(-3, 3);
+document.write("numeros = "+numeros);
+document.write("<br>");
+document.write("numeros.length = "+numeros.length);
+document.write("<br>");
+
+</script>

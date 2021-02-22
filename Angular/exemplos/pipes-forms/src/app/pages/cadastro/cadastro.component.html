@@ -1,0 +1,31 @@
+{{formCadastro.valid}}
+{{formCadastro.value | json}}
+<form #formCadastro="ngForm">
+    <div class="form-group">
+        <label for="nome">Nome:</label>
+        <input type="text" class="form-control" #iptNome="ngModel" ngModel id="nome" name="nome"
+            placeholder="digite o Nome" required>
+        <div *ngIf="iptNome.invalid && iptNome.touched" class="alert alert-danger" role="alert">
+            <div >
+                Nome inválido
+            </div>
+        </div>
+    </div>
+
+    <div class="form-group">
+        <label for="rua">Rua:</label>
+        <input type="text" name="rua" class="form-control" ngModel id="rua" placeholder="digite a rua" #iptRua="ngModel"
+            required>
+        <div *ngIf="iptRua.invalid && iptRua.touched" class="alert alert-danger" role="alert">
+            Rua inválido
+        </div>
+    </div>
+
+    <div class="form-group">
+        <label for="senha">Senha:</label>
+        <input type="password" name="senha" class="form-control" ngModel id="senha" placeholder="digite a senha">
+    </div>
+
+    <button (click)="checkForm(formCadastro.value)" class="btn btn-primary" type="submit"
+        [disabled]="formCadastro.invalid">Enviar</button>
+</form>

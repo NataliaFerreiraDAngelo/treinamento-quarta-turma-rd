@@ -1,0 +1,67 @@
+<!DOCTYPE html>
+<html lang="pt-br">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title></title>
+</head>
+<body>
+	<script>
+		/*
+		Fazer uma calculadora:
+		1)Permitir fazer conta de adição, subtração, multiplicação e divisão.
+		2)Exibir prompt para o usuário parecido com: “Qual a operação? 1) Adição 2) Subtração 3) Multiplicação 
+			4) Divisão 5) Sair” (validar se o usuário digitou as opções corretas da calculadora)
+		3)Exibir 2 prompts para o usuário digitar os números que devem ser envolvidos na operação.
+		4)Exibir com alert com o resultado da operação. 
+			Ex.: se o usuário informou adição e os número 2 e 3, exibir no alert “2 + 3 = 5”.
+		5)Fazer os tratamentos necessários, caso o usuário digitar algo diferente de número. 
+			Caso o usuário digitar algo que não é número, enviar um alert para avisá-lo que digitou algo errado e, 
+			em seguida, repetir o prompt.
+		6)Após exibir o resultado no alert, voltar ao prompt inicial de opções da 
+			calculadora. Assim, a execução só vai terminar quando o usuário escolher a opção de “Sair”.
+		*/
+	function validaEntrada(entrada){
+		if (isNaN (entrada) || entrada < 1 || entrada > 5){
+			return false;
+		}else {
+			return true;
+		}
+	}
+	
+	let operacao = Number(prompt("Qual a operação que deseja realizar? \n 1) Adição \n 2) Subtração \n 3) Multiplicação \n 4) Divisão \n 5) Sair"));
+	
+	while (validaEntrada(operacao)){
+		let numero1 = Number(prompt("Digite o primeiro número da operação: "));
+		let numero2 = Number(prompt("Digite o segundo número da operação: "));
+		let resultado = 0;
+		
+		if(operacao == 1){
+			resultado = numero1 + numero2;
+			alert( numero1 + " + " + numero2 + " = " + resultado);
+		} else if (operacao == 2){
+			resultado = numero1 - numero2;
+			alert( numero1 + " - " + numero2 + " = " + resultado);
+		} else if (operacao == 3){
+			resultado = numero1 * numero2;
+			alert( numero1 + " * " + numero2 + " = " + resultado);
+		} else if (operacao == 4){
+			resultado = numero1 / numero2;
+			alert( numero1 + " / " + numero2 + " = " + resultado);
+		} else {
+		     alert ("A opção digitada não é válida");
+		       }
+		
+		}
+		operacao = Number(prompt("Qual a operação que deseja realizar? \n 1) Adição \n 2) Subtração \n 3) Multiplicação \n 4) Divisão \n 5) Sair"));
+	
+	}else{
+		alert ("A opção digitada não é válida");
+		operacao = Number(prompt("!!!Qual a operação que deseja realizar? \n 1) Adição \n 2) Subtração \n 3) Multiplicação \n 4) Divisão \n 5) Sair"));
+	
+	}
+	
+		
+	</script>
+</body>
+</html>

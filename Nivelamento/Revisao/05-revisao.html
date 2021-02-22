@@ -1,0 +1,33 @@
+<!DOCTYPE html>
+<html lang="pt-br">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title></title>
+</head>
+<body>
+	<script>
+		function pulaLinha() {
+            document.write("<br>");
+        }
+        function mostra(frase) {
+            document.write(frase);
+            pulaLinha();
+        }
+        function calculaIMC(peso, altura) {
+            let imc = peso / (altura * altura);
+            return imc;
+        }
+        let limiteMagreza = 18.5;
+        let limiteObesidade = 18.5;
+        let peso = 66;
+        let altura = 1.66;
+        let imc = Math.round(calculaIMC(peso, altura));
+        mostra("meu IMC é "+ Math.round(calculaIMC(peso, altura)));
+        mostra("está "+(imc - limiteMagreza)+" pontos do limite da magreza.");
+        mostra("está "+(limiteObesidade - imc)+" pontos do limite da obesidade.");
+
+		
+	</script>
+</body>
+</html>

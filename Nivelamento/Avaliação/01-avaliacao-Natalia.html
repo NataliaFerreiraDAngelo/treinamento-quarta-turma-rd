@@ -1,0 +1,50 @@
+<!DOCTYPE html>
+<html lang="pt-br">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title></title>
+</head>
+<body>
+	<script>
+		/*
+		1)Defina uma função chamada “produto”, que deve receber um array de números e que deve retornar o produto resultante entre eles (a multiplicação de todos os elementos entre si). Ex.: ao chamar produto([1, 4, 7]), deve retornar 28, pois 1 * 4 * 7.
+		*/
+	
+		function pulaLinha(){
+			document.write("<br>");
+			document.write("<br>");
+		}
+		function mostra(frase){
+			document.write(frase);
+			pulaLinha ();
+		}
+		function produto(array){
+			
+			let produto = 1;
+			
+			for (let i = 0 ; i < array.length; i++){
+				if(isNaN(array[i])){
+					mostra("Pelo menos um dos parâmetros informados não é um número");
+					return "";
+				}else {
+					produto = produto * array[i];
+				}
+			}
+			return produto;
+			
+		}
+		
+		//Testes unitários
+		mostra("O resultado deverá ser 28. O retorno da função é = " + produto([1, 4, 7]));
+		mostra("O resultado deverá ser -28. O retorno da função é = " + produto([1, 4, -7]));
+		mostra("O resultado deverá ser 1.890. O retorno da função é = " + produto([3, -5, 9, -2, 7]));
+		mostra("O resultado deverá ser -2.880. O retorno da função é = " + produto([1, 2, -8, 3, -5, 6, -2]));
+		mostra("<hr>");
+		mostra("Testes unitários com strings no array: <br>");
+		mostra(produto(["a",1, 4, 7]));
+		mostra(produto(["banana", "maca", "limao"]));
+		
+	</script>
+</body>
+</html>

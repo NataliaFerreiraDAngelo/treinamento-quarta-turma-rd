@@ -1,0 +1,19 @@
+input:focus{
+    background-color: lightsalmon;
+}
+
+textarea{
+    resize: vertical;
+}
+
+h1:hover{
+    color: lime;
+}
+
+h2:hover{
+    color: greenyellow;
+}
+
+h3:hover{
+    color: green;
+}

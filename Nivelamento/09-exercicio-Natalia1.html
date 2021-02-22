@@ -1,0 +1,38 @@
+<!DOCTYPE html>
+<html lang="pt-br">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title></title>
+</head>
+<body>
+	<script>
+		
+		function pulaLinha () {
+			document.write("<br>");  
+		}        
+		function mostra(frase) {            
+			document.write(frase);            
+			pulaLinha ();        
+		} 
+		function sorteia(numero){
+			return Math.round(Math.random() * 100);
+		}
+		
+		let numeroPensado = sorteia(100);
+		let chute = prompt("Já pensei num número de 0 a 100.Qual você acha que é?");
+		
+		if (chute != isNaN && numeroPensado < chute){
+			mostra("O número pensado é MENOR!");
+		}else if (chute != isNaN && numeroPensado > chute) {           
+			mostra("O número pensado é MAIOR!");
+		}else if (chute != isNaN && numeroPensado == chute){
+			mostra("VOCÊ ACERTOU!")
+		}else{
+			mostra ("O valor digitado não é um número!! Tente novamente!");
+		}
+		
+				
+	</script>
+</body>
+</html>

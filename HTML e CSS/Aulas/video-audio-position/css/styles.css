@@ -1,0 +1,161 @@
+body {
+    background-color: rgb(221, 219, 219);
+}
+
+.popup {
+    width: 400px;
+    height: 200px;
+    background-color: white;
+    border: 2px solid  black;
+    position: fixed;
+    z-index: 4;
+    left: 200px;
+    top: 200px;
+
+}
+
+.overlay {
+    width: 100%;
+    height: 100%;
+    position: fixed;
+    background-color: rgba(0,0,0,0.4);
+    top: 0;
+    left: 0;
+    z-index: 3;
+}
+
+/*---inicio menu fixo---*/
+.menu-fixed {
+    width: 100%;
+    height: 70px;
+    border-bottom: 2px solid #04f1e5;
+    background-color: white;
+    margin: 0;
+    position: fixed;
+    top: 0;
+    left: 0;
+    z-index: 2;
+}
+
+.menu-fixed ul li {
+    display: inline-block;
+    font-size: 18px;
+    font-weight: bold;
+    padding: 10px;
+}
+/*---fim menu fixo---*/
+
+.position {
+    background-color: rgb(71, 255, 246);
+    width: 150px;
+    height: 150px;
+    border: 5px solid blue;  
+}
+.container-position {
+    background-color: rgb(165, 122, 42);
+    width: 900px;
+    height: 500px;
+    margin: 0  auto;
+    position: relative;
+}
+
+.relative {
+    position: relative;
+    top: 10px;
+    left: 10px;
+}
+
+.absolute {
+    position: absolute;
+    top: 100px;
+    right: 50px;
+}
+
+.fixed {
+    position: fixed;
+    top: 100px;
+    left: 400px;
+}
+
+.cores {
+    width: 400px;
+    height: 200px;
+    font-weight: bold;
+    font-size: 24px;
+    color: white;
+    background-color: rgb(165, 25, 25);
+    
+}
+
+.cores2 {
+    width: 400px;
+    height: 200px;
+    font-weight: bold;
+    font-size: 24px;
+    color: white;
+    background-color: rgb(25, 46, 165);
+    
+}
+
+.back-exemplo {
+    width: 400px;
+    height: 200px;
+    background-image: url('../images/banner.png');
+    background-repeat: no-repeat;
+    background-size: 200px;
+    border: 2px solid red;
+}
+
+#exemplo_id {
+    color: red;
+}
+/* tudo que está na página */
+* {
+    font-family: Arial, Helvetica, sans-serif;
+}
+
+/* tudo que está dento do body */
+/* body {
+    font-family: Arial, Helvetica, sans-serif;
+} */
+
+/* tudo que está dentro de lista-produtos */
+/* .lista-produtos * {
+    font-family: Arial, Helvetica, sans-serif;
+} */
+
+.grid-produtos {
+    margin-bottom: 30px;
+}
+
+.titulo-grid {
+    color: grey;
+    font-weight: bold;
+}
+
+.lista-produtos .item {
+    display: inline-block;
+}
+
+.lista-produtos .item h4 {
+    font-weight: bold;
+    text-align: center;
+}
+
+.lista-produtos .item a {
+    text-decoration: none;
+    color: #000;
+}
+
+.nome, .preco {
+    color: red;
+}
+
+.preco .preco-filho .preco-filho-filho {
+    font-weight: bold;
+    text-decoration: underline;
+}
+
+h4#mesmo_id.mesmo {
+    color: hotpink;
+}

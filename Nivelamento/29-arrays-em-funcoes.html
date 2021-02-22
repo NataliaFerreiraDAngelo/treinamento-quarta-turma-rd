@@ -1,0 +1,61 @@
+<script>
+
+function pulaLinha() {
+  document.write("<br>");
+}
+function mostra(texto) {
+  document.write(texto);
+  pulaLinha();
+}
+
+// funcao que retorna um array
+function obtemNumeros() {
+  let totalNumeros = Number(prompt("Quantos numeros quer multiplicar?"));
+  let numeros = []; // declaracao do array "numeros"
+  for (let n = 0; n < totalNumeros; n++) {
+    let numero = Number(prompt("Digite o numero ("+n+"):"));
+    numeros.push(numero);
+  }
+  return numeros;
+}
+
+// funcao que recebe um array como parametro
+function multiplicacao(laranjinha) {
+  let resultado = 1;
+  //mostra("laranjinha="+laranjinha);
+  //mostra("laranjinha.length="+laranjinha.length);
+  //mostra("laranjinha[0]="+laranjinha[0]);
+  for (let n = 0; n < laranjinha.length; n++) {
+    resultado = resultado * laranjinha[n];
+  }
+  return resultado;
+}
+
+
+// parte principal
+//let numeros = obtemNumeros();
+//let resultado = multiplicacao(numeros);
+//mostra("numeros digitados = "+numeros);
+//mostra("resultado multiplicacao = "+resultado);
+
+let resultado2 = multiplicacao([10, 20, 30]);
+mostra("numeros digitados = "+[10, 20, 30]);
+mostra("resultado multiplicacao 2 = "+resultado2);
+document.write("<hr>");
+
+let resultado3 = multiplicacao(2);
+mostra("numeros digitados = "+2);
+mostra("resultado multiplicacao 3 = "+resultado3);
+document.write("<hr>");
+
+let resultado4 = multiplicacao("ABC");
+mostra("numeros digitados = "+"ABC");
+mostra("resultado multiplicacao 4 = "+resultado4);
+document.write("<hr>");
+
+let resultado5 = multiplicacao("123");
+mostra("numeros digitados = "+"123");
+mostra("resultado multiplicacao 5 = "+resultado5);
+document.write("<hr>");
+
+</script>

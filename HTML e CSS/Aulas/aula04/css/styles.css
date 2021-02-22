@@ -1,0 +1,127 @@
+* {
+    box-sizing: border-box;
+    font-family: Arial, Helvetica, sans-serif;
+}
+
+html {
+    font-size: 16px;
+}
+
+body {
+    font-size: 2em;
+}
+
+.percent-pai {
+    font-size: 200%;
+}
+
+.percent-filho {
+    font-size: 100%;
+}
+
+.titulo-1 {
+    font-size: 2.5rem;
+}
+
+.titulo-2 {
+    font-size: 2rem;
+}
+
+.titulo-3 {
+    font-size: 1.5rem;
+}
+
+div {
+    font-size: 2em;
+}
+
+.media-query {
+    height: 100px;
+    width: 100px;
+    background-color: tomato;
+}
+
+.media-query2 {
+    height: 100px;
+    width: 100px;
+    background-color: blue;
+}
+
+/*inicio menu*/
+.menu-horizontal {
+    padding: 0;
+    list-style: none;
+    background-color: rgb(3, 190, 166);
+    display: flex;
+    justify-content: space-around;
+}
+
+.menu-horizontal li:hover {
+    background-color: rgb(5, 146, 127);
+}
+
+.menu-horizontal a {
+    color: #fff;
+    text-decoration: none;
+    padding: 20px 30px;
+    font-size: 22px;
+    display: block;
+}
+
+.menu-vertical {
+    background-color: rgb(1, 58, 50);
+    list-style: none;
+    width: 20%;
+    padding: 0;
+}
+
+.menu-vertical li:hover {
+    background-color: rgb(3, 177, 154);
+}
+
+.menu-vertical a {
+    text-decoration: none;
+    color: #fff;
+    display: inline-block;
+    padding: 20px 20px 20px 50px;
+    font-size: 22px;
+    width: 100%;
+}
+
+.menu-vertical .icon::before {
+    position: absolute;
+    margin-left: 12px;
+    margin-top: 15px;
+}
+
+.menu-vertical .home::before {
+    content: url("../images/home.png");
+    
+}
+
+.menu-vertical .about::before {
+    content: url("../images/about-us.png");
+}
+
+/*fim menu*/
+
+
+@media (min-width: 580px) and (max-width:680px) and (orientation: landscape) {
+    .media-query {
+        width: 200px;
+        background-color: blue;
+    }
+
+    .media-query2 {
+        height: 100px;
+        width: 100px;
+        background-color: red;
+    }
+}
+
+@media (min-width:681px) and (max-width: 780px) {
+    .media-query {
+        width: 300px;
+        background-color: purple;
+    }
+}

@@ -1,0 +1,96 @@
+body{
+    display: flexbox;
+    background-color: #dbdbdb;
+    padding: 20px;
+}
+
+.flex-container {
+    display: flex;
+    font-family: Arial, Helvetica, sans-serif;
+}
+
+.menu-vertical{
+    background-color: #3c3d41;
+    width: 20%;
+    height: 800px;
+}
+
+.corpo{
+    width: 75%;
+}
+
+.corpo .barra-horizontal{
+    display: flex;
+    justify-content: space-between;
+    padding: 10px 20px;
+}
+
+.menu-vertical ul{
+    list-style-type: none;
+    padding-inline-start: 15px;
+}
+
+.menu-vertical a {
+    text-decoration: none;
+    color: #dfe0e4;
+    font-size: 16px;
+}
+
+.menu-vertical a:hover{
+    color: #28846b;
+}
+
+.barra-horizontal{
+    background-color: #3c3d41;
+    width: 800px;
+}
+
+.login{
+    background-color: #333439;
+    text-align: center;
+    padding: 20px;
+}
+
+input{
+    border-radius: 15px;
+    background-color: #dbdbdb;
+}
+
+.menu-vertical .icon::after{
+    content: url("../images/icon_seta.png");
+    margin-left: 90px;
+}
+
+.menu-vertical .pesquisa::after{
+    content: url("../images/icon_search.png");
+}
+
+.corpo .pesquisa::after{
+    content: url("../images/icon_search.png");
+}
+
+.corpo .mail::before{
+    content: url("../images/icon_email.png");
+    margin-right: 30px;
+}
+
+
+h4{
+    color: #28846b;
+    font-size: 20px;
+}
+
+h5{
+    color: #d8d9dd;
+    font-size: 1em;
+    text-align: center;
+}
+
+.pesquisa{
+    padding: 20px;
+    justify-content: space-between;
+}
+
+.icon{
+    justify-content: space-between;
+}

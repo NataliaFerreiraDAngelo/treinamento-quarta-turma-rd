@@ -1,0 +1,70 @@
+<!DOCTYPE html>
+<html lang="pt-br">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title></title>
+</head>
+<body>
+	<script>
+		/*
+		2)Defina uma função chamada “maisMenos”, que deve receber um array de números e que deve retornar outro array com os seguintes 3números:1.Na primeira posição, o percentual de números do array que são positivos2.Na segunda posição, o percentual de números do array que são zero3.Na última posição, o percentual de números do array que são negativosEx.: ao chamar maisMenos([1, 2, 0, -1]), deve retornar [0.5, 0.25, 0.25], pois há 50% de números positivos no array, 25% de números zero e 25% de números negativos.
+		*/
+	
+		function pulaLinha(){
+			document.write("<br>");
+			document.write("<br>");
+		}
+		function mostra(frase){
+			document.write(frase);
+			pulaLinha ();
+		}
+		function maisMenos(array){
+			let arrayRetorno = [];
+			let somaPositivos = 0;
+			let somaZeros = 0;
+			let somaNegativos = 0;
+			
+			for (let i = 0; i < array.length; i++){
+				if(isNaN(array[i])){
+					mostra("Pelo menos um dos parâmetros informados não é um número");
+					return "";
+				}			
+				if (array[i] > 0 ){
+					somaPositivos = somaPositivos + 1;
+				}else if (array[i] == 0 ){
+					somaZeros = somaZeros + 1;
+				}
+				else if (array[i] < 0 ){
+					somaNegativos = somaNegativos + 1;
+				}
+			}
+			
+			
+			let percentualPositivos = parseFloat(somaPositivos / array.length).toFixed(2);
+			arrayRetorno.push(percentualPositivos);
+			
+			let percentualZeros = parseFloat(somaZeros / array.length).toFixed(2);
+			arrayRetorno.push(percentualZeros);
+			
+			let percentualNegativos = parseFloat(somaNegativos / array.length).toFixed(2);
+			
+			arrayRetorno.push(percentualNegativos);
+			
+			return arrayRetorno;
+		}
+		
+		
+		//Testes Unitários
+		mostra("O resultado deverá ser [0.5, 0.25, 0.25]. O retorno da função é = [" + maisMenos([1, 2, 0, -1]) + "]");
+		mostra("O resultado deverá ser [0.75, 0.00, 0.25]. O retorno da função é = [" + maisMenos([1, 2, 5, -1]) + "]");
+		mostra("O resultado deverá ser [0.17, 0.5, 0.33]. O retorno da função é = [" + maisMenos([1, -2, 0, -1, 0, 0]) + "]");
+		mostra("<hr>");
+		mostra("Testes unitários com strings no array:");
+		mostra(maisMenos(["a", -2, 0, -1, 0, 0]));
+		mostra(maisMenos([ -2, 0, "a", -1, 0, 0]));
+		
+		
+	</script>
+</body>
+</html>

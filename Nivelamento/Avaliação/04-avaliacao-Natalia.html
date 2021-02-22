@@ -1,0 +1,63 @@
+<!DOCTYPE html>
+<html lang="pt-br">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title></title>
+</head>
+<body>
+	<script>
+		/*
+		4)As árvores utópicas crescem de uma forma particular, em dois ciclos:A cada primavera, dobram seu tamanho.A cada verão, crescem um metro.Se uma árvore utópica é plantada com um metro no final do outono, qual seria sua altura depois de N ciclos?
+		Exemplo:
+		Se N = 0, altura será 1 metro (não cresceu nada)
+		Se N = 1, altura será 2 metros (dobrou a altura na primavera)
+		Se N = 2, altura será 3 metros (cresceu mais 1 metro no verão)
+		Se N = 3, altura será 6 metros (dobrou a altura na primavera seguinte)
+		E assim por diante...Defina a função “alturaArvoreUtopica”, que recebe a altura inicial da árvore utópica plantada no final do outono e a quantidade de ciclos de crescimento, e que retorne a altura resultante após a quantidade de ciclos de crescimento informada.
+		Ex.: ao chamar alturaArvoreUtopica(2, 5), deve retornar 22, pois a altura da árvore iniciou com 2, após 1º ciclo foi para 4, após 2º foi para 5, após 3º foi para 10, após 4º foi para 11 e após 5º foi para 22.
+		*/
+	
+		function pulaLinha(){
+			document.write("<br>");
+			document.write("<br>");
+		}
+		function mostra(frase){
+			document.write(frase);
+			pulaLinha ();
+		}
+		
+		function alturaArvoreUtopica(inicio, cliclos){
+			let altura = inicio;
+			let erro = "Pelo menos um dos parâmetros informados não é um número";
+			if(isNaN(inicio) || isNaN(cliclos)){
+					return erro;
+			}else{
+				for (let i = 1 ; i <= cliclos; i ++){
+					if (i % 2 != 0){
+						altura = altura * 2;
+					}else {
+						altura = altura +1;
+					}
+				
+				}
+				return altura;
+			}
+		}
+		
+		
+		
+		//Testes Unitários
+		mostra(alturaArvoreUtopica(2, 5));
+		mostra(alturaArvoreUtopica(1, 3));
+		mostra(alturaArvoreUtopica(5, 0));
+		mostra("<hr>");
+		mostra("Teste unitário com strings no parâmetro: <br>");
+		mostra(alturaArvoreUtopica("a", 2));
+		mostra(alturaArvoreUtopica(7, "c"));
+		
+		
+		
+	</script>
+</body>
+</html>

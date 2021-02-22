@@ -1,0 +1,16 @@
+uma classe carro
+ter 2 atributos (1 velocidade máxima e velocidade atual)
+ter 2 metodos (acelerar (de 5 em 5 km) e frear (de 5 em 5) fazer checagem sem ficar negativo, não pode parar
+ter 1 construtor que permita criar um carro com a velocidade máxima
+
+duas classes especializadas Civic e Ferrari (ferrari só acelera de 15 em 15 km)
+
+classe teste criar Civic e uma Ferrari acelerar e frear várias vezes e printar o valor de aceleração e de freagem.
+
+acelera, velocidade atual, acelera, velocidade aual, freia , velocidade
+
+os carros não podem passar da velocidade máxima.
+
+
+mensagem formatada A velocidade atual é: valor velocidade + km/h
+

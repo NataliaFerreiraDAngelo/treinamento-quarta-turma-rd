@@ -1,0 +1,69 @@
+<!DOCTYPE html>
+<html lang="pt-br">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title></title>
+</head>
+<body>
+	<script>
+		function pulaLinha(){
+			document.write("<br>");
+		}
+		function mostra(frase){
+			document.write(frase);
+			pulaLinha ();
+		}
+		
+		function sorteiaNumeros(){
+			let array = [];
+			for (let n = 0; n < 6; n ++){
+				numero = Math.ceil(Math.random()*60);
+				if (array.indexOf(numero) <0){
+					array.push(numero);
+				}
+			}
+			
+			return array;
+		}
+		
+		function chutes(){
+			let array2 = [];
+			let n = 0;
+			while (n < 6 ){
+				chute = Number(prompt("Digite o seu número " + (n+1) + ":" ));
+				if (array2.indexOf(chute) <0){
+					array2.push(chute);
+					n ++;
+				} else {
+					alert("Você já digitou este número!");
+				}
+			}
+			return array2;
+		}
+		
+		function acertos(sorteados, digitados){
+			let acertados = [];
+			for (let n = 0; n < digitados.length; n ++){
+				if (sorteados.indexOf(digitados[n]) >= 0){
+					acertados.push(digitados[n]);
+				}
+			}
+			
+			return acertados;
+		}
+		
+		let sorteados = sorteiaNumeros();
+		alert(sorteados);
+		
+		let numerosUsuario = chutes();
+		
+		let acertados = acertos(sorteados, numerosUsuario);
+		
+		mostra("Números sorteados: " + sorteados);
+		mostra("Números chutados: " + numerosUsuario);
+		mostra("Números acertados: " + acertados);
+		
+	</script>
+</body>
+</html>

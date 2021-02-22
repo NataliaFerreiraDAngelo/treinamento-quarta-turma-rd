@@ -1,0 +1,40 @@
+<!DOCTYPE html>
+<html lang="pt-br">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title></title>
+</head>
+<body>
+	<script>
+		function pulaLinha () {
+			document.write("<br>");  
+		}        
+		function mostra(frase) {            
+			document.write(frase);            
+			pulaLinha ();        
+		} 
+		
+		function calcularIMC (peso, altura){
+			return peso / (altura * altura);
+		};
+		
+		let peso = parseFloat (window.prompt("Qual é o seu peso"));
+		let altura = parseFloat (window.prompt("Qual é a sua altura"));
+		let imc = calcularIMC(peso, altura);	
+				
+		let limiteMagreza = 18.5;
+		let limiteObesidade = 35;
+		
+		let distanciaMagreza = imc - limiteMagreza;
+		let distanciaObesidade = limiteObesidade - imc;
+		
+		mostra ("Seu IMC é " + imc);
+		mostra ("Seu índice está " + distanciaMagreza + "pontos do limite de magreza severa.");
+		mostra ("E está " + distanciaObesidade + "pontos do limite de obesidade severa.");
+		
+		
+				
+	</script>
+</body>
+</html>

@@ -1,0 +1,71 @@
+/*inicio games*/
+body{
+    background-color: skyblue;
+}
+
+section{
+    display: flex;
+    justify-content: center;
+    height: 100%;
+}
+
+h1{
+    text-align: center;
+}
+
+span{
+    font-size: 10px;
+    text-align: left;
+}
+
+.games {
+    background-color: white;
+    list-style: none;
+    width: 30%;
+    padding: 0;
+}
+
+.games li{
+    border-bottom: 1px solid gray;
+}
+
+.games li:hover {
+    background-color:blueviolet;
+}
+
+.games a {
+    text-decoration: none;
+    color: black;
+    display:block;
+    padding: 15px 20px 30px 100px;
+    font-size: 25px;
+    width: 100%;
+}
+
+.games .icon::before {
+    position: absolute;
+    margin-left: 25px;
+    margin-top: 15px;
+
+}
+
+.games .game1::before {
+    content: url("../image/mega.png"); 
+
+}
+
+.games .game2::before {
+    content: url("../image/snes.png");  
+}
+
+.games .game3::before {
+    content: url("../image/ps.png");  
+}
+
+.games .game4::before {
+    content: url("../image/xbox.png");  
+}
+
+
+
+/*fim games*/

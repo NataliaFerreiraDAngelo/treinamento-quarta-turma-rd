@@ -1,0 +1,57 @@
+<script>
+
+let frutas = ["banana", "maca", "laranja", "abacaxi"]; // criação de array com valores inicializados
+document.write("frutas = "+frutas);
+document.write("<br>");
+document.write("frutas.length = "+frutas.length);
+document.write("<br>");
+
+let numeros = [10,,15,10,,20]; // criação de array com alguns elementos "indefinidos"
+//let numeros = [10,15,10,20];
+document.write("numeros = "+numeros);
+document.write("<br>");
+document.write("numeros.length = "+numeros.length);
+document.write("<br>");
+document.write("numeros[1] = "+numeros[1]);
+document.write("<br>");
+
+let array = [10, "abc", true]; // criação de array com valores de tipos diferentes
+document.write("array = "+array);
+document.write("<br>");
+document.write("array.length = "+array.length);
+document.write("<br>");
+
+let numeros2 = [10, 20, 30];
+document.write("numeros2 = "+numeros2);
+document.write("<br>");
+document.write("numeros2.length = "+numeros2.length);
+document.write("<br>");
+document.write("numeros2[0] = "+numeros2[0]);
+document.write("<br>");
+document.write("numeros2[1] = "+numeros2[1]);
+document.write("<br>");
+document.write("numeros2[2] = "+numeros2[2]);
+document.write("<br>");
+
+numeros2[1] = 200; // modificação no elemento do array
+document.write("numeros2 = "+numeros2);
+document.write("<br>");
+
+numeros2[3] = 1.5; // inclusão de elemento ao final do array;
+document.write("numeros2 = "+numeros2);
+document.write("<br>");
+document.write("numeros2.length = "+numeros2.length);
+document.write("<br>");
+
+numeros2[4] = numeros2[3];
+numeros2[3] = numeros2[2];
+numeros2[2] = numeros2[1];
+numeros2[1] = numeros2[0];
+numeros2[0] = 1000;
+
+document.write("numeros2 = "+numeros2);
+document.write("<br>");
+document.write("numeros2.length = "+numeros2.length);
+document.write("<br>");
+
+</script>

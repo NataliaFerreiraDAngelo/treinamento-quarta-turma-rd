@@ -1,0 +1,75 @@
+<!DOCTYPE html>
+<html>
+    <head>
+        <meta charset="utf-8"/>
+        <title>Aula2 - Formulários</title>
+        <link href="css/styles.css" rel="stylesheet"/>
+    </head>
+    <body>
+        <a target="_blank" href="https://www.w3schools.com/html/html_form_input_types.asp">
+            Input types
+        </a>
+
+        <h2>Formulário</h2>
+        <form>
+            <label for="nome_id">Nome: </label>
+            <input id="nome_id" type="text" name="nome" placeholder="Digite seu nome" required/>
+            
+            <label>Sobrenome: </label>
+            <input type="text" name="sobrenome" />
+            
+            <label>E-mail: </label>
+            <input type="email" name="email" placeholder="Digite seu email" />
+            
+            <label>Idade: </label>
+            <input type="number" name="idade" />
+
+
+            <h3>Estado Civil</h3>
+            <input type="radio" id="sol" name="estado_civil" value="Solteiro">
+            <label for="sol">Solteiro </label>
+            <br>
+            <input type="radio" name="estado_civil" value="Casado">
+            <label>Casado </label>
+
+            <h3>Hobbies</h3>
+            <input type="checkbox" name="hobbies" value="Surf">
+            <label>Surf</label>
+            <br>
+            <input type="checkbox" name="hobbies" value="Música">
+            <label>Música</label>
+            <br>
+            <h3>Select - combobox</h3>
+            <select name="pais">
+                <option>Selecione o País</option>
+                <optgroup label="Sul América">
+                    <option value="AR">Argentina</option>
+                    <option value="BR">Brasil</option>
+                    <option value="CO">Colômbia</option>
+                </optgroup>
+                <optgroup label="Europa">
+                    <option value="AL">Alemanha</option>
+                    <option value="ES">Espanha</option>
+                    <option value="IT">Itália</option>
+                </optgroup>
+                <optgroup label="Asia">
+                    <option value="JP">Japão</option>
+                    <option value="CH">China</option>
+                    <option value="CS">Coréia Sul</option>
+                </optgroup>
+            </select>
+
+            <h3>Textarea</h3>
+            <textarea name="mensagem"></textarea>
+
+            <br>
+            <br>
+            <br>
+            <button type="submit">Enviar</button>
+
+            <button type="reset">Excluir</button>
+
+            <button type="button">Outra ação</button>
+        </form>
+    </body>
+</html>

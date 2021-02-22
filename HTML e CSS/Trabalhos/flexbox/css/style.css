@@ -1,0 +1,56 @@
+body {
+    background-color: #d69f7e;
+    background-image: url("../img/fundo.png");
+    background-blend-mode: luminosity;
+}
+
+
+.menu-principal {
+    background-color: #8a5a44;
+    font-size: 1.5rem;
+    color: white;
+}
+
+.navbar-light .navbar-brand{
+    color: white;
+    font-weight: bold;
+}
+
+.navbar-light .navbar-nav .active>.nav-link{
+    color: white;
+}
+
+.form-control {
+    background-color: #b07d62;
+    border: 1px solid #edc4b3;
+}
+
+.form-control .mr-sm-2{
+    color: white;
+}
+
+.card-title{
+    text-align: center;
+}
+
+footer{
+    margin-top: 50px;
+    clear: both;
+    background-color: #774936;
+    height: 60px;
+    font-size: 1.3rem;
+}
+
+footer a {
+    color: white;
+}
+
+.radius {
+    border-radius: 25px 25px 0px 0px;
+}
+
+.btn-outline-dark{
+    color: white;
+    border-color: whitesmoke;
+}
+

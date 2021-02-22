@@ -1,0 +1,7 @@
+<div *ngIf="!endereco.ehDesativado">
+    <button (click)="addEndereco()">Adicionar endereço</button>
+    <div>
+        {{endereco.rua}}, {{endereco.numero}} - bairro: {{endereco.bairro}} - {{endereco.cidade}}
+    </div>
+</div>
+

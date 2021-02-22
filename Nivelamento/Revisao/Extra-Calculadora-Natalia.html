@@ -1,0 +1,61 @@
+<!DOCTYPE html>
+<html lang="pt-br">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title></title>
+</head>
+<body>
+	<script>
+		function pulaLinha(){
+			document.write("<br>");
+		}
+		function mostra(frase){
+			document.write(frase);
+			pulaLinha ();
+		}
+		
+		let opcao = 0;
+		
+		
+		while (opcao != 5){
+			opcao = prompt("Qual a operação? \n 1) Adição \n 2) Subtração \n 3) Multiplicação \n 4) Divisão \n 5) Sair");
+			if(isNaN(opcao)){
+				alert("Isso não é um número, digite novamente!");
+			}else {
+				if (opcao >=1 && opcao <=4){
+					
+					let numero1 = Number(prompt("Digite o primeiro número: "));
+						if (isNaN(numero1)){
+							alert("Isso não é um número, digite novamente!");
+							continue;
+						}
+						
+					let numero2 = Number(prompt("Digite o segundo número: "));
+						if (isNaN(numero1)){
+							alert("Isso não é um número, digite novamente!");
+							continue;
+						}
+					
+					let resultado = 0;
+					
+					if (opcao == 1 ){
+						resultado = numero1 + numero2;
+						alert(numero1 + " + " + numero2 + " = " + resultado);
+					}else if (opcao == 2 ){
+						resultado = numero1 - numero2;
+						alert(numero1 + " - " + numero2 + " = " + resultado);
+					}else if (opcao == 3 ){
+						resultado = numero1 * numero2;
+						alert(numero1 + " * " + numero2 + " = " + resultado);
+					}else if (opcao == 4 ){
+						resultado = numero1 / numero2;
+						alert(numero1 + " / " + numero2 + " = " + resultado);
+					}
+				}
+			}
+		}
+		
+	</script>
+</body>
+</html>

@@ -1,0 +1,128 @@
+Listagem de Endereços
+
+1 - Crie um projeto angular chamado exercicio1
+    ng new exercicio1
+
+2 - Entre na pasta exercicio1, gerado pelo comando anterior
+    cd exercicio1
+
+3 - Inicialize o projeto usando o comando abaixo:
+        ng serve --open
+        lembrando que usando o --open, o projeto vai inicializar no navegador
+        se você possui uma outra aplicação rodando usando a porta 4200, você pode usar --port, setando a porta desejada como no exemplo abaixo:
+            ng serve --port 4201 --open
+
+4 - Crie um componente chamado endereço usando o comando abaixo:
+    ng g c endereco
+
+5 - Agora vamos colocar esse componente dentro do arquivo app.componente.html, usando o seletor do componente endereço:
+    src/app/app.component.html
+        <app-endereco></app-endereco>
+
+6 - Teste sua aplicação no navegador e veja se o componente endereço está sendo renderizado na tela
+
+7 - Dentro do arquivo endereco.component.ts, crie um método chamado iniciar() seguindo o código abaixo:
+    src/app/endereco/endereco.component.ts
+    iniciar() {
+        alert("componente foi renderizado");
+    }
+
+    O método acima deve ser executado toda vez que o componente for renderizado usando o método ngOnInit().
+
+8 - Ainda no arquivo endereco.component.ts, crie outro método chamado addEndereco() seguindo o código abaixo:
+    src/app/endereco/endereco.component.ts
+    addEndereco() {
+        addEndereco() {
+            if(confirm("deseja adicionar o endereço")){
+                alert("endereço adicionado com sucesso");
+                return;
+            };
+    
+            alert("endereço não foi adicionado")
+        }
+    }
+
+9 - agora em src/app/endereco/endereco.component.html, crie um botão como no exemplo abaixo:
+    <button>Adicionar endereço</button>
+
+    atravéz do evento (click), ao clicar no botão o método addEndereco deve executado.
+
+10 - Endereço terá os seguintes dados: id, rua, numero, bairro, cidade, ehDesativado
+    crie uma model que represente um endereço.
+    src/app/endereco/endereco.model.ts
+    lembrando que é sempre necessário usar o export na interface endereco
+
+11 - faça o import da model dentro do arquivo endereco.component.ts e crie um atributo chamado 'endereco' do tipo Endereco. Nesse atributo você deve usar o decorator @Input(), pois os dados serão passados na declaração do componente.
+obs: Input deve ser importado do módulo @angular/core
+
+12 -agora em endereco.component.html, adicione o seguinte código:
+
+<div>
+    {{endereco.rua}}, {{endereco.numero}} - bairro: {{endereco.bairro}} - {{endereco.cidade}}
+</div>
+
+endereco é o atributo que criamos no passo 11, porém os dados como rua, numero e etc, não serão renderizados, pois precisam ser passados na declaração do component. Bom vamos fazer isso!
+
+13 - em src/app/app.component.ts importe a model de Endereco
+import { Endereco } from './endereco/endereco.model';
+
+14 - crie um atributo chamado enderecos, usando o código abaixo:
+
+enderecos: Endereco = {
+  id: 123,
+  rua: "do Sol",
+  numero: 435,
+  bairro: "Centro",
+  cidade: "Campinas"
+}
+
+15 - agora em app.component.html adicione o valor do atributo endereco no qual usamos o @Input, ficando assim:
+<app-endereco [endereco]="enderecos"></app-endereco>
+
+[endereco] é o atributo que está em endereco.component.ts -> @Input() endereco: Endereco;
+
+"enderecos" está em app.component.ts e é um objeto literal que possui um endereço apenas.
+
+Teste e veja se o endereço foi renderizado.
+
+16 - agora vamos usar uma lista de endereços, então no arquivo app.component.ts, endereços será um array
+
+enderecos: Endereco[] = [
+  {
+    id: 1,
+    rua: "do Sol",
+    numero: 435,
+    bairro: "Centro",
+    cidade: "Campinas",
+    ehDesativado: false
+  },
+  {
+    id: 2,
+    rua: "da Lua",
+    numero: 4535,
+    bairro: "Centro",
+    cidade: "Campinas",
+    ehDesativado: true
+  },
+  {
+    id: 3,
+    rua: "do Céu",
+    numero: 4235,
+    bairro: "Centro",
+    cidade: "Campinas",
+    ehDesativado: false
+  }
+]
+
+17 - em app.component.html vamos usar a diretiva *ngFor para percorrer esse array:
+<app-endereco *ngFor="let item of enderecos" [endereco]="item"></app-endereco>
+
+Obs: quantas vez o método ngOnInit foi executado?
+
+
+18 - Endereços desativados não podem ser renderizados, usando a diretiva *ngIf, implente a solução.
+
+
+
+
+    

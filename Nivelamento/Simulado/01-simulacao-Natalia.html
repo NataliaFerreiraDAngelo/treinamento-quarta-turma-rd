@@ -1,0 +1,27 @@
+<!DOCTYPE html>
+<html lang="pt-br">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title></title>
+</head>
+<body>
+	<script>
+		
+	function precoMaca(quantidade){
+		let valorTotal = 0;
+		if (quantidade >= 12 ){
+			valorTotal = quantidade * 0.25;
+		}else {
+			valorTotal = quantidade * 0.30;
+		}
+	return valorTotal;
+	}	
+	
+	let precoFinal = precoMaca(10);
+	
+	document.write(precoFinal);
+		
+	</script>
+</body>
+</html>

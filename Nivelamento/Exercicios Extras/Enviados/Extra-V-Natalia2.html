@@ -1,0 +1,30 @@
+<!DOCTYPE html>
+<html lang="pt-br">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title></title>
+</head>
+<body>
+	<script>
+		
+		document.write("EXERCÍCIO 4");
+		document.write("<br>");
+		document.write("<br>");
+		
+		
+		for (let linha = 1; linha <= 10; linha ++){
+			for (let coluna = 1; coluna <= 20; coluna ++){
+				if(coluna == linha || coluna == 21-linha){
+					document.write("_");
+				}else{
+					document.write("*");
+				}
+				
+			}
+			document.write("<br>");
+		}
+		
+	</script>
+</body>
+</html>

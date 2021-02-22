@@ -1,0 +1,48 @@
+<script>
+
+let totalNumeros = Number(prompt("Quantos numeros quer somar?"));
+
+let numeros = []; // declaracao do array "numeros"
+document.write("numeros.length = "+numeros.length);
+document.write("<br>");
+
+for (let n = 0; n < totalNumeros; n++) {
+  let numero = Number(prompt("Digite o numero ("+n+"):"));
+  numeros[n] = numero;
+}
+// aqui o array numeros está preenchido
+document.write("numeros = "+numeros);
+document.write("<br>");
+
+document.write("numeros.length = "+numeros.length);
+document.write("<br>");
+
+// imprimir os elementos do array que foi preenchido
+for (let n = 0; n < numeros.length; n++) {
+  document.write("posicao "+n+" = "+numeros[n]);
+  document.write("<br>");
+}
+
+// soma dos elementos do array
+let soma = 0;
+for (let n = 0; n < numeros.length; n++) {
+  soma += numeros[n];
+}
+document.write("soma dos elementos do array = "+soma);
+document.write("<br>");
+
+// exibir todos elementos do array e o resultado da soma
+soma = 0;
+let texto = "";
+for (let n = 0; n < numeros.length; n++) {
+  soma += numeros[n];
+  texto = texto + numeros[n];
+  if (n != numeros.length - 1) { // condição para saber se é o último elemento do array
+    texto = texto + " + ";
+  }
+}
+document.write("a soma "+texto+" = "+soma);
+document.write("<br>");
+
+
+</script>

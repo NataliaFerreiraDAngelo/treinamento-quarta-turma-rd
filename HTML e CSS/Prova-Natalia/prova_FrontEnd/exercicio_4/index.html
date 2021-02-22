@@ -1,0 +1,130 @@
+<!DOCTYPE html>
+<html lang="pt-BR">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Exercício 4</title>
+    <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/4.0.0/css/bootstrap.min.css" integrity="sha384-Gn5384xqQ1aoWXA+058RXPxPg6fy4IWvTNh0E263XmFcJlSAwiGgFAW/dAiS6JXm" crossorigin="anonymous">
+    <link href="./css/styles.css" rel="stylesheet">
+</head>
+<body class="container"></body>
+    <main> 
+        <nav class="navbar navbar-expand-lg navbar-dark bg-dark">
+            <a class="navbar-brand" href="#">Crud</a>
+            <button class="navbar-toggler" type="button" data-toggle="collapse" data-target="#navbarNavDropdown" aria-controls="navbarNavDropdown" aria-expanded="false" aria-label="Toggle navigation">
+            <span class="navbar-toggler-icon"></span>
+            </button>
+            <div class="collapse navbar-collapse" id="navbarNavDropdown">
+            <ul class="navbar-nav">
+                <a class="nav-link dropdown-toggle" href="#" id="navbarDropdownMenuLink" data-toggle="dropdown" aria-haspopup="true" aria-expanded="false">
+                    Clientes
+                </a>
+                <div class="dropdown-menu" aria-labelledby="navbarDropdownMenuLink">
+                    <a class="dropdown-item" href="#">Cadastro</a>
+                    <a class="dropdown-item" href="#">Pedido</a>
+                    <a class="dropdown-item" href="#">Sair</a>
+                </div>
+                </li>
+            </ul>
+            </div>
+        </nav>
+    </main>
+
+    <section class="container">
+        <h1>Nova Receita</h1>
+        <hr>
+        <form>
+            <div class="form-row">
+                <div class="form-group col-12 col-md-2">
+                    <label for="input-crm">CRM:</label>
+                    <input class="form-control" id="input-crm" type="text">
+                    <div style="display: none;" class="alert alert-danger alert-crm" role="alert">
+                        CRM Obrigatório
+                    </div>
+                </div>
+                <div class="form-group col-12 col-md-6">
+                    <label for="input-medico">Nome do Médico:</label>
+                    <input type="text" class="form-control" id="input-medico">
+                    <div style="display: none;" class="alert alert-danger alert-medico" role="alert">
+                        Nome do Médico Obrigatório
+                    </div>
+                </div>
+                <div class="form-group col-12  col-md-2">
+                    <label for="data-receita">Data da Receita</label>
+                    <input type="date" class="form-control" id="data-receita">
+                </div>
+                <div class="form-group col-12  col-md-2">
+                    <label for="input-caixas">Quantidade de Caixas:</label>
+                    <input type="number" class="form-control" id="input-caixas">
+                    <div style="display: none;" class="alert alert-danger alert-caixas" role="alert">
+                        Campo Obrigatório
+                    </div>
+                </div>
+            </div>
+            <div class="form-row">
+                <div class="form-group col-12 col-md-6">
+                    <label for="input-nome">Nome do Paciente: </label>
+                    <input class="form-control" id="input-nome" type="text">
+                    <div style="display: none;" class="alert alert-danger alert-nome" role="alert">
+                        Nome do Paciente Obrigatório
+                    </div>
+                </div>
+                <div class="form-group col-12 col-md-3">
+                    <label for="input-cpf">CPF do Cliente:</label>
+                    <input type="text" class="form-control" id="input-cpf">
+                    <div style="display: none;" class="alert alert-danger alert-cpf" role="alert">
+                        CPF Inválido
+                    </div>
+                </div>
+                <div class="form-group col-md-3">
+                    <label for="data-nascimento">Data de Nascimento</label>
+                    <input type="date" class="form-control" id="data-nascimento">
+                </div>
+            </div>
+            <div class="form-row">
+                <div class="form-group col-md-3">
+                    <h5>Sexo</h5>
+                    <div class="form-check">
+                        <input class="genero form-check-input" id="masculino" type="radio" name="genero" value="M">
+                        <label class="form-check-label" for="masculino">Masculino</label>
+                    </div>
+                    <div class="form-check">
+                        <input class="genero form-check-input" id="feminino" type="radio" name="genero" value="F">
+                        <label class="form-check-label" for="feminino">Feminino</label>
+                    </div>
+                </div>
+                <div class="form-group col-md-3">
+                    <label>Tipo de Envio</label>
+                    <select required id="id_select" class="form-control">
+                        <option>Anexar Arquivo</option>
+                        <option>WhatsApp</option>
+                        <option>E-mail</option>
+                    </select>
+                </div>
+            </div>
+            <div>
+                <button class="btn btn-success">Salvar</button>
+                <button class="btn btn-light">Cancelar</button>
+            </div>
+       
+        </form>
+
+    </section>
+
+    </header>
+
+    <hr>
+
+    <footer>
+        <small>&copy; 2020 - RD Divas Academy</small>
+    </footer>
+
+
+
+    <script src="https://code.jquery.com/jquery-3.2.1.slim.min.js" integrity="sha384-KJ3o2DKtIkvYIK3UENzmM7KCkRr/rE9/Qpg6aAZGJwFDMVNA/GpGFF93hXpG5KkN" crossorigin="anonymous"></script>
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/popper.js/1.12.9/umd/popper.min.js" integrity="sha384-ApNbgh9B+Y1QKtv3Rn7W3mgPxhU9K/ScQsAP7hUibX39j7fakFPskvXusvfa0b4Q" crossorigin="anonymous"></script>
+    <script src="https://maxcdn.bootstrapcdn.com/bootstrap/4.0.0/js/bootstrap.min.js" integrity="sha384-JZR6Spejh4U02d8jOt6vLEHfe/JQGiRRSQQxSfFWpi1MquVdAyjUar5+76PVCmYl" crossorigin="anonymous"></script>
+    <script src="./js/jquery.mask.js"></script>
+    <script src="./js/apps.js"></script>
+</body>
+</html>

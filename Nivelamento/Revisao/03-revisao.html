@@ -1,0 +1,39 @@
+<!DOCTYPE html>
+<html lang="pt-br">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title></title>
+</head>
+<body>
+	<h3>Álcool ou Gasolina?</h3>
+	
+	<script>
+		let tanque = 40;
+		let caminhoComGasolina = 480;
+		let consumoGasolina = caminhoComGasolina / tanque;
+		
+		document.write("Consumo com Gasolina = " + consumoGasolina.toFixed(2));
+		document.write("<br>");
+		
+		let caminhoComAlcool = 300;
+		let consumoAlcool = caminhoComAlcool / tanque;
+			
+		document.write("Consumo com Álcool = " + consumoAlcool.toFixed(2));
+		document.write("<br>");
+		
+		let precoGasolina = 4.558;
+		let precoAlcool = 3.052;
+		
+		let precoPorKilometroGasolina = precoGasolina / consumoGasolina;
+		let precoPorKilometroAlcool = precoAlcool / consumoAlcool;
+		
+		document.write("Preço por Kilometro com Gasolina = " + precoPorKilometroGasolina.toFixed(2));
+		document.write("<br>");
+		document.write("Preço por Kilometro com Álcool = " + precoPorKilometroAlcool.toFixed(2));
+		document.write("<br>");
+		
+	
+	</script>
+</body>
+</html>

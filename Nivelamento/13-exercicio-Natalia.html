@@ -1,0 +1,33 @@
+<!DOCTYPE html>
+<html lang="pt-br">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title></title>
+</head>
+<body>
+	<script>
+	
+		let numeroPensado = Math.round(Math.random() * 1000); // gera um numero de 0 a 100
+		let tentativas = 1;
+		let acerto = false;
+		
+		while (acerto == false) {
+			let chute = Number(prompt("("+numeroPensado+") Chuta um número!"));
+			if (chute == numeroPensado) {
+				alert("VC ACERTOU! Em " + tentativas + " tentativas.");
+				break;
+			} else {
+				if(chute < numeroPensado)
+					alert("VC ERROU! O núumero pensado é maior");
+				else {
+					alert("VC ERROU! O número pensado é menor");
+				}
+			}
+		tentativas++;
+		}
+		document.write("GAME OVER!");
+	
+	</script>
+</body>
+</html>

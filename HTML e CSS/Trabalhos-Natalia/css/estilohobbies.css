@@ -1,0 +1,55 @@
+
+html {
+    width: 960px;
+    margin: 0 auto;
+    justify-content: center;
+}
+main, aside, header, footer{
+    background-color: skyblue;
+    border: solid 5px blue;
+    margin: 10px 0px;
+    box-sizing: border-box;
+}
+
+main{
+    width: 290px;
+    height: 400px;
+    float: left;
+    padding: 20px;
+}
+
+main ul{
+    list-style: none;
+    text-align: center;
+}
+
+main ul li a{
+    text-decoration: none;
+    color: black;
+    justify-content: center;
+    vertical-align: middle;
+}
+
+aside{
+    width: 650px;
+    height: 400px;
+    text-align: justify;
+    float: right;
+    padding: 20px;
+    overflow: hidden;
+}
+
+header, footer{
+    text-align: center;
+    clear: both;
+}
+
+img{
+    width: 600px;
+    height: 320px;
+}
+
+h2{
+    text-align: center;
+}
+

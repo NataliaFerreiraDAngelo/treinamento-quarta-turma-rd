@@ -1,0 +1,71 @@
+html {
+    font-family: sans-serif;
+    display: flex;
+    justify-content: center;
+}
+
+h1, h2{
+    color: darkblue;
+}
+
+h1{
+    text-align: center;
+    font-style: italic;
+}
+
+h2{
+    font-style: normal;
+    text-decoration: underline;
+}
+
+h6{
+    color: slategrey;
+    text-align: right;
+}
+
+p{
+    font-size: 14px;
+    line-height: 23px;
+}
+
+mark{
+    background-color: rgb(116, 205, 240);
+}
+
+em{
+    color: black;
+}
+
+Strong{
+    font-style: italic;
+}
+
+header, section{
+    background-color: skyblue;
+    width: 960px;
+    padding: 30px;
+    border: dotted 3px blue;
+    margin: 20px 0px;
+}
+
+.links{
+    text-decoration: none;
+    color: slategrey;
+}
+
+
+main ul{
+    list-style: none;
+    text-align: center;
+}
+
+main ul li{
+    display: inline;
+    text-align: center;
+}
+
+main ul li a{
+    text-decoration: none;
+    margin-right: 50px;
+    color: steelblue;
+}

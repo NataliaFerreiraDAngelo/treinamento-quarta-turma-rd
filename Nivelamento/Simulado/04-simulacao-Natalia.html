@@ -1,0 +1,27 @@
+<!DOCTYPE html>
+<html lang="pt-br">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title></title>
+</head>
+<body>
+	<script>
+	
+		function numerosMultiplo(multiplicador, inicial, fim){
+			let array = [];
+			let resultado = 0;
+			while (resultado < fim){
+				resultado = inicial * multiplicador;
+				array.push(resultado);
+				inicial ++;
+			}
+		return array;
+		}
+		
+		let numeros = numerosMultiplo(3, 1, 30);
+		document.write(numeros);
+	
+	</script>
+</body>
+</html>

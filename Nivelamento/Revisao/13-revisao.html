@@ -1,0 +1,44 @@
+<!DOCTYPE html>
+<html lang="pt-br">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title></title>
+</head>
+<body>
+	<script>
+		function pulaLinha(){
+			document.write("<br>");
+		}
+		function mostra(frase){
+			document.write(frase);
+			pulaLinha ();
+		}
+		function sorteia(numero){
+			return Math.round(Math.random() * numero); 
+		}
+		
+		let numeroPensado = sorteia(1000);
+        let chute = -1;
+		let tentativas = 1;
+		
+		while (chute != numeroPensado){
+			chute = Number(prompt(numeroPensado + "Já pensei num número de 0 a 1000. Qual você acha que é?"));
+			if (chute == numeroPensado){
+				alert("VOCÊ ACERTOU");
+			}else {
+				if (chute < numeroPensado){
+					alert("VOCÊ ERROU! \n O número pensado é maior que o chute.");
+				}else{
+					alert("VOCÊ ERROU! \n O número pensado é menor que o chute.");
+				}
+				tentativas ++;
+			}	
+		}
+		
+		mostra("VC ACERTOU APÓS "+tentativas+" TENTATIVAS!");
+		mostra("GAME OVER!");
+	
+	</script>
+</body>
+</html>

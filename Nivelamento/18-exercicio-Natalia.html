@@ -1,0 +1,54 @@
+<!DOCTYPE html>
+<html lang="pt-br">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title></title>
+</head>
+<body>
+	<script>
+		/*
+		Serie Fibonacci: 0, 1, 1, 2, 3, 5, 8, 13, 21, 34, 55 ...
+​		
+		A regra é:
+​		
+		a posição n = (n-1) + (n-2)
+​		
+		Fazer uma função "fibonacci" que vai receber como parâmetro o tamanho da
+		série, ou seja, a partir do início da série, quantos números devem ser
+		retornados no array.
+​		
+		Por exemplo, ao chamar fibonacci(10), deve ser retornado um array com os 
+		elementos [0, 1, 1, 2, 3, 5, 8, 13, 21, 34]
+		*/
+	
+		function pulaLinha(){
+			document.write("<br>");
+		}
+		function mostra(frase){
+			document.write(frase);
+			pulaLinha ();
+		}
+		function fibonacci(tamanho){
+			let primeiroElemento = 0;
+			let segundoElemento = 1;
+			let resultado = 0;
+			let array = [0, 1 ];
+			
+			for (let i = 2; i < tamanho; i++){
+				resultado = primeiroElemento + segundoElemento;
+				array.push(resultado);
+				primeiroElemento = segundoElemento;
+				segundoElemento = resultado;
+				
+			}
+			
+			return array;
+		}
+		
+		let arrayFibonacci = fibonacci("banana");
+		mostra (arrayFibonacci);
+		
+	</script>
+</body>
+</html>

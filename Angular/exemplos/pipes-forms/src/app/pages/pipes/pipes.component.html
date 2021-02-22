@@ -1,0 +1,11 @@
+<div>{{user.name | lowercase}}</div>
+
+<div>{{0.5 | percent}}</div>
+
+<div>{{user.niver | date: 'dd/MM/yyyy'}}</div>
+
+<div>{{user.price | currency: 'BRL':true}}</div>
+
+<div>{{user.name | slice: 0:4}}</div>
+
+<div>{{['one', 'two'] | slice: 0:1 | json | uppercase}}</div>

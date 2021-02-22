@@ -1,0 +1,138 @@
+<!DOCTYPE html>
+<html lang="pt-BR">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Formulários</title>
+    <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/4.0.0/css/bootstrap.min.css" integrity="sha384-Gn5384xqQ1aoWXA+058RXPxPg6fy4IWvTNh0E263XmFcJlSAwiGgFAW/dAiS6JXm" crossorigin="anonymous">
+    <link href="./css/styles.css" rel="stylesheet">
+</head>
+<body class="container">
+    <header>
+        <main> 
+            <nav class="navbar navbar-expand-lg navbar-dark bg-dark">
+                <a class="navbar-brand" href="#">Crud</a>
+                <button class="navbar-toggler" type="button" data-toggle="collapse" data-target="#navbarNavDropdown" aria-controls="navbarNavDropdown" aria-expanded="false" aria-label="Toggle navigation">
+                <span class="navbar-toggler-icon"></span>
+                </button>
+                <div class="collapse navbar-collapse" id="navbarNavDropdown">
+                <ul class="navbar-nav">
+                    <a class="nav-link dropdown-toggle" href="#" id="navbarDropdownMenuLink" data-toggle="dropdown" aria-haspopup="true" aria-expanded="false">
+                        Clientes
+                    </a>
+                    <div class="dropdown-menu" aria-labelledby="navbarDropdownMenuLink">
+                        <a class="dropdown-item" href="#">Cadastro</a>
+                        <a class="dropdown-item" href="#">Pedido</a>
+                        <a class="dropdown-item" href="#">Sair</a>
+                    </div>
+                    </li>
+                </ul>
+                </div>
+            </nav>
+        </main>
+
+        <section class="container">
+            <h1>Novo Cliente</h1>
+            <hr>
+            <form>
+                <div class="form-row">
+                    <div class="form-group col-12 col-md-6">
+                        <label for="input-nome">Nome: </label>
+                        <input class="form-control" id="input-nome" type="text">
+                        <div style="display: none;" class="alert alert-danger alert-nome" role="alert">
+                            Campo Obrigatório
+                        </div>
+                    </div>
+                    <div class="form-group col-12 col-md-3">
+                        <label for="input-cpf">CNPJ / CPF</label>
+                        <input type="text" class="form-control" id="input-cpf">
+                        <div style="display: none;" class="alert alert-danger alert-cpf" role="alert">
+                            CNPJ/CPF Inválido
+                        </div>
+                    </div>
+                    <div class="form-group col-md-3">
+                        <label for="data-nascimento">Data de Nascimento</label>
+                        <input type="date" class="form-control" id="data-nascimento">
+                    </div>
+                </div>
+                <div class="form-row">
+                    <div class="form-group col-12 col-md-4">
+                        <label for="input-endereco">Endereco</label>
+                        <input type="text" class="form-control" id="input-endereco">
+                        <div style="display: none;" class="alert alert-danger alert-endereco" role="alert">
+                            Campo Obrigatório
+                        </div>
+                    </div>
+                    <div class="form-group col-12 col-md-3">
+                        <label for="input-bairro">Bairro</label>
+                        <input type="text" class="form-control" id="input-bairro">
+                        <div style="display: none;" class="alert alert-danger alert-bairro" role="alert">
+                            Campo Obrigatório
+                        </div>
+                    </div>
+                    <div class="form-group col-12 col-md-2">
+                        <label for="input-cep">CEP</label>
+                        <input type="text" class="form-control" id="input-cep">
+                        <div style="display: none;" class="alert alert-danger alert-cep" role="alert">
+                            CEP Inválido
+                        </div>
+                    </div>
+                    <div class="form-group col-12 col-md-3">
+                        <label for="data-cadastro">Data de Cadastro</label>
+                        <input type="date" disabled class="form-control" id="data-cadastro">
+                    </div>
+                </div>
+                <div class="form-row">
+                    <div class="form-group col-12 col-md-2">
+                        <label for="input-municipio">Município</label>
+                        <input required type="text" class="form-control" id="input-municipio">
+                    </div>
+                    <div class="form-group col-12 col-md-2">
+                        <label for="input-telefone">Telefone</label>
+                        <input required type="text" class="form-control" id="input-telefone">
+                    </div>
+                    <div class="form-group col-12 col-md-2">
+                        <label for="input-celular">Celular</label>
+                        <input required type="text" class="form-control" id="input-celular">
+                    </div>
+                    <div class="form-group col-12 col-md-1">
+                        <label for="input-uf">UF</label>
+                        <input required type="text" class="form-control" id="input-uf">
+                        <div style="display: none;" class="alert alert-danger alert-uf" role="alert">
+                            UF Inválido
+                        </div>
+                    </div>
+                    <div class="form-group col-12 col-md-2">
+                        <label for="input-inscr-estad">Inscrição Estadual</label>
+                        <input type="text" class="form-control" id="input-inscr-estad">
+                    </div>
+                    <div class="form-group col-12 col-md-3">
+                        <label for="input-uf-insc">UF</label>
+                        <input type="text" class="form-control" id="input-uf-insc">
+                        
+                    </div>
+                </div>
+                <button class="btn btn-primary">Salvar</button>
+                <button class="btn btn-outline-secondary">Cancelar</button>
+           
+            </form>
+            
+        </section>
+
+        
+
+    </header>
+        <hr>
+        <footer>
+            <small>&copy; 2016 - Web Dev Academy</small>
+        </footer>
+
+
+
+    <script src="https://code.jquery.com/jquery-3.2.1.slim.min.js" integrity="sha384-KJ3o2DKtIkvYIK3UENzmM7KCkRr/rE9/Qpg6aAZGJwFDMVNA/GpGFF93hXpG5KkN" crossorigin="anonymous"></script>
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/popper.js/1.12.9/umd/popper.min.js" integrity="sha384-ApNbgh9B+Y1QKtv3Rn7W3mgPxhU9K/ScQsAP7hUibX39j7fakFPskvXusvfa0b4Q" crossorigin="anonymous"></script>
+    <script src="https://maxcdn.bootstrapcdn.com/bootstrap/4.0.0/js/bootstrap.min.js" integrity="sha384-JZR6Spejh4U02d8jOt6vLEHfe/JQGiRRSQQxSfFWpi1MquVdAyjUar5+76PVCmYl" crossorigin="anonymous"></script>
+    <script src="./js/jquery.mask.js"></script>
+    <script src="./js/apps.js"></script>
+</body>
+</html>

@@ -1,0 +1,43 @@
+<!DOCTYPE html>
+<html lang="pt-br">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title></title>
+</head>
+<body>
+	<script>	
+		//function maximoR(array, tamanho) {
+		//	if (tamanho == 1) {
+		//		return array[0];
+		//	}
+		//	let max = maximoR(array, tamanho-1);
+		//	if (max < array[tamanho-1]) {
+		//		return array[tamanho-1];
+		//	} else {
+		//		return max;
+		//	}
+		//}
+
+		
+		function maximo(array){
+			let maior = array[0];
+			for (let i = 0; i < array.length; i++){
+				if (array[i] > maior){
+				maior = array[i];
+				}
+			}
+		return maior;
+		}
+			
+				
+		//let arrays = mamaximoR([3,5,1,9,2], 5);
+		//document.write(arrays); 
+		
+		let numeroMaior = maximo([3,5,1,9,2]);
+		document.write(numeroMaior); 
+		
+	
+	</script>
+</body>
+</html>

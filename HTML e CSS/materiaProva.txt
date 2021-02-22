@@ -1,0 +1,6 @@
+bootsrap (1p)
+lógica programação javascript (1p)
+layout pronto, fazer alterações no CSS (2p)
+lista, mudar o conteúdo da lista com innerText (
+formulário, regex, validações (3p)
+reproduzir um layout com css puro, sem bootstrap (3p)

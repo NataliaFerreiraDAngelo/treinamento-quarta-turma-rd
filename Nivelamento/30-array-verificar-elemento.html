@@ -1,0 +1,28 @@
+<script>
+
+function existeNoArray(array, valor) {
+  for (let n = 0; n < array.length; n++) {
+    if (valor == array[n]) {
+	  return true;
+	}
+  }
+  return false;
+}
+
+let numeros = [10, 20, 30, 40, 50];
+
+if (existeNoArray(numeros, 20)) {
+  document.write("20 existe no array numeros");
+} else {
+  document.write("20 NAO existe no array numeros");
+}
+document.write("<br>");
+
+if (existeNoArray(numeros, 21)) {
+  document.write("21 existe no array numeros");
+} else {
+  document.write("21 NAO existe no array numeros");
+}
+document.write("<br>");
+
+</script>

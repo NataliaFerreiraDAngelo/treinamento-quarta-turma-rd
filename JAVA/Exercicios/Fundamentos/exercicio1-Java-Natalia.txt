@@ -1,0 +1,28 @@
+package br.com.rd.exercicios;
+
+public class Exercicio1 {
+	public static void main(String[] args) {
+		
+		double soma1 = 3 + 2;
+		double multipli1 = 6 * soma1;
+		double potenc1 = Math.pow(multipli1, 2);
+		double dividendo1 = 3 * 2;
+		double direita = potenc1 / dividendo1;
+		
+		double soma2 = 1 - 5;
+		double soma3 = 2 - 7;
+		double result1 = (soma2*soma3) / 2;
+		double esquerda = Math.pow(result1, 2);
+		
+		double subtacao = direita - esquerda;
+		
+		double potenc2 = Math.pow(subtacao, 3);
+		
+		double potenc3 = Math.pow(10, 3);
+		
+		double resultado = potenc2 / potenc3;
+		
+				
+		System.out.print("O resultado da equação é: " + resultado);
+	}
+}

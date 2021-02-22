@@ -1,0 +1,10 @@
+<h2>Livro Java</h2>
+
+<p><strong>Título:</strong> {{ livro.titulo | lowercase | uppercase}}</p>
+<p><strong>Estrelas:</strong> {{ livro.rating | number: '1.1-1'}}</p>
+<p><strong>Páginas:</strong> {{ livro.numeroPaginas | number}}</p>
+<p><strong>Preço:</strong> {{ livro.preco | currency:'BRL':true}}</p>
+<p><strong>Data Lançamento:</strong> {{ livro.dataLancamento | date}}</p>
+<p><strong>URL:</strong> <a [href]="livro.url" target="_blank">Acessar link</a></p>
+
+<p><strong>Livro:</strong> {{ livro | json}}</p>

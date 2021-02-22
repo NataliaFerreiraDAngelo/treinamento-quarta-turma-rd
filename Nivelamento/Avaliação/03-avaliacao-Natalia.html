@@ -1,0 +1,70 @@
+<!DOCTYPE html>
+<html lang="pt-br">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title></title>
+</head>
+<body>
+	<script>
+		/*
+		3)Defina uma função “alturaEscada”, cujo objetivo é representar uma escada com altura variável utilizando um array de strings.
+		Ex.: ao chamar alturaEscada(3), deve ser retornado um array de strings que poderia ser representado assim:
+		let escada3 = 
+		[
+		“__#”,
+		“_##”,
+		“###”
+		];
+		E ao chamar alturaEscada(5), deve ser retornado um array de strings assim: 
+		let escada5 = 
+		[
+		“____#”,
+		“___##”,
+		“__###”,
+		“_####”,
+		“#####”
+		];
+		
+		Dica: Em JavaScript, pode-se repetir um texto usando a função “repeat” da seguinte maneira:let degrau = “#”.repeat(2); // resultado: degrau = “##”;
+		*/
+	
+		function pulaLinha(){
+			document.write("<br>");
+		}
+		function mostra(frase){
+			document.write(frase);
+			pulaLinha ();
+		}
+		function alturaEscada(altura){
+		
+			let arrayEscada= [];
+			let degrau = "";
+			let erro = "O parâmetro informado não é um número";
+			if(isNaN(altura)){
+					return erro;
+			}else{
+				for (let linhas = 1; linhas <= altura; linhas ++){		
+					degrau = "_".repeat(altura-linhas) + "#".repeat(linhas);
+					arrayEscada.push(degrau + "<br>");
+				}
+				return arrayEscada;
+			}
+		}
+		
+		//Testes Unitários
+		mostra(alturaEscada(3));
+		mostra("<hr>");
+		mostra(alturaEscada(5));
+		mostra("<hr>");
+		mostra(alturaEscada(7));
+		mostra("<hr>");
+		mostra(alturaEscada(10));
+		mostra("<hr>");
+		mostra("Teste unitário com strings no parâmetro: <br>");
+		mostra(alturaEscada("a"));
+		
+		
+	</script>
+</body>
+</html>
